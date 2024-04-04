@@ -1,0 +1,31 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title":"Novo evento",
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/0de3f8a0-1ab5-4548-b009-67682c28648e/attendees
+Content-Type: application/json
+
+{
+    "name":"Erick Freitas",
+    "email":"erickelsas@gmail.com"
+}
+
+###
+GET http://localhost:3333/events/0de3f8a0-1ab5-4548-b009-67682c28648e
+
+###
+GET http://localhost:3333/attendees/1/badge
+
+###
+GET http://localhost:3333/attendees/2/check-in
+
+###
+GET http://localhost:3333/events/0de3f8a0-1ab5-4548-b009-67682c28648e/attendees?pageIndex=0&name=erick
+
